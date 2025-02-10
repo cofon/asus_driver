@@ -1,0 +1,11 @@
+split 
+命令：split -b 50M largefile.zip largefile_part_
+生成：largefile_part_aa
+    ：largefile_part_ab
+    ：largefile_part_ac
+    ：largefile_part_ad
+    : largefile_part_ae
+
+merge
+命令：cat largefile_part_* > largefile_restored.zip
+命令执行后，所有前缀为 largefile_part_ 的文件合并为一个文件：largefile_restored.zip
